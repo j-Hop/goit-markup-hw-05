@@ -107,6 +107,19 @@ transition: color var(--transition-duration) var(--transition-timing-function)  
 position: relative;
 }
 
+.header-link.current{
+  color: var(--sixth-color);
+}
+
+.header-link.active{
+  color: var(--sixth-color);
+}
+
+.header-link:focus,
+.header-link:hover{
+  color: var(--sixth-color);
+}
+
 .header-link.current::after{
   content: "";
   position: absolute;
@@ -441,11 +454,6 @@ transition: border-color var(--transition-duration) var(--transition-timing-func
   border-color: var(--first-border-color);
 }
 
-.customers-link:hover .customers-navigation,
-.customers-link:focus .customers-navigation{
-  fill: var(--sixth-color);
-}
-
 
 .backdrop{
   width: 100%;
@@ -486,7 +494,12 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
 }
 
 .modal-close:hover{
-  background-color:var(--sixth-color) ;
+  background-color:var(--sixth-color);
+  fill:var(--third-color) ;
+}
+
+.modal-close .modal-icon:hover{
+
 }
 
 .modal-icon{
@@ -495,15 +508,11 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
   left: 33.33%;
   width: 8px;
   height: 8px;
-  fill: #000000;
   background-repeat: no-repeat;
   background-position: center;
   transition:fill var(--transition-duration) var(--transition-timing-function) ;
 }
 
-.modal-icon:hover{
-  fill:var(--third-color) ;
-}
 
 .is-hidden{
   opacity: 0;
